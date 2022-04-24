@@ -252,9 +252,22 @@ def simul():
    return(winner.iloc[0])
 
 
+#### Monte Carlo Simulation
 
+def monte_carlo(n):
+   winners = []
+   for i in range(n):
+      winner = simul()
+      winners.append(winner)
+   winners = pd.DataFrame(winners)
+   winners.columns = ['winner']
+   pltdata = winners['winner'].value_counts()
+   pltdata.plot(kind='bar')
+   plt.show()
+   
 
-
+#### Execute simulation
+monte_carlo(1000)
 
 
 
