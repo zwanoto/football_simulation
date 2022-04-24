@@ -247,7 +247,6 @@ def simul():
             results_group['result'][i] = g
             results_group['result'][i+1] = 3-g
       results_group = results_group[results_group['result']==3]
-      print(results_group)
    winner = (results_group['Team'])
    return(winner.iloc[0])
 
